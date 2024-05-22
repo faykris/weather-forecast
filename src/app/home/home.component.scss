@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  height: 100vh;
+  .sidebar {
+    padding-top: 2rem;
+    width: 25%;
+    background-color: #397bef;
+    color: white;
+    z-index: 1;
+    box-shadow: 1px 1px 15px 3px #67a;
+    nav {
+      display: flex;
+      flex-direction: column;
+      .location {
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 8px 24px;
+        text-decoration: none;
+      }
+      .activeButton {
+        background: #6aabee linear-gradient(to bottom, #69a8ea 5%, #0c73e0 100%);
+        color: #ffffff;
+        text-shadow: 0 1px 0 #528ecc;
+      }
+    }
+  }
+  .container {
+    width: 75%;
+    padding: 3vw;
+    display: flex;
+    justify-content: center;
+    background: #bddbfa linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+  }
+}
+
+
