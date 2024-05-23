@@ -19,18 +19,36 @@ export class ChartComponent {
     const periods = this.data.properties.periods;
     const labels = periods.map((period: any) => period.name);
     const temperatures = periods.map((period: any) => period.temperature);
+    const precipitations = periods.map((period: any) => period.probabilityOfPrecipitation?.value || 0);
+    const humidity = periods.map((period: any) => period.relativeHumidity?.value || 0);
 
     new Chart(this.canvasRef.nativeElement, {
       type: 'line',
       data: {
         labels: labels,
-        datasets: [{
-          label: 'Temperature (F)',
-          data: temperatures,
-          borderColor: 'rgba(75, 192, 192, 1)',
-          backgroundColor: 'rgba(75, 192, 192, 0.2)',
-          fill: true,
-        }]
+        datasets: [
+          {
+            label: 'Temperature (F)',
+            data: temperatures,
+            borderColor: 'rgb(192,75,173)',
+            backgroundColor: 'rgba(192,75,186,0.2)',
+            fill: false,
+          },
+          {
+            label: 'Probability of Precipitation (%)',
+            data: precipitations,
+            borderColor: 'rgb(75,171,192)',
+            backgroundColor: 'rgba(75,165,192,0.2)',
+            fill: false,
+          },
+          {
+            label: 'Relative Humidity (%)',
+            data: humidity,
+            borderColor: 'rgb(100,75,192)',
+            backgroundColor: 'rgba(75,81,192,0.2)',
+            fill: false,
+          },
+        ]
       },
       options: {
         responsive: true,
