@@ -9,6 +9,7 @@
   </div>
   <div class="icon">
     <img [src]="period?.icon" [alt]="period?.name">
+    <p>{{period?.shortForecast}}</p>
   </div>
   <div class="info">
     <p>
@@ -17,15 +18,15 @@
     </p>
     <p>
       <span>Dew point: </span>
-      {{period?.dewpoint.value || 'N/A'}}
+      {{period?.dewpoint?.value ? period?.dewpoint?.value.toFixed(2) + '°C' : 'N/A'}}
     </p>
     <p>
       <span>Probability of precipitation: </span>
-      {{period?.probabilityOfPrecipitation.value || 'N/A'}}
+      {{ period?.probabilityOfPrecipitation?.value ? period?.probabilityOfPrecipitation?.value + '%' : '0%' }}
     </p>
     <p>
       <span>Relative Humidity: </span>
-      {{period?.relativeHumidity.value || 'N/A'}}
+      {{period?.relativeHumidity.value+ '%' || 'N/A'}}
     </p>
     <p>
       <span>Temperature: </span>
