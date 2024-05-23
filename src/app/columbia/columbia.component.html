@@ -9,7 +9,7 @@
   </div>
   <div class="icon">
     <img [src]="period?.icon" [alt]="period?.name">
-    <p>{{period?.shortForecast}}</p>
+    <p>{{period?.shortForecast || ''}}</p>
   </div>
   <div class="info">
     <p>

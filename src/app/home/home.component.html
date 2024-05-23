@@ -1,4 +1,36 @@
+<div *ngIf="enableMenu" class="menu-shadow">
+  <div class="menu">
+    <img
+      (click)="changeMenuStatus()"
+      alt="menu"
+      src="https://raw.githubusercontent.com/faykris/weather-monitoring-front/main/src/assets/icons/icon-menu-close.svg"
+    >
+    <nav>
+      <a class="location"
+         (click)="changeMenuStatus()"
+         routerLink="LWX"
+         routerLinkActive="activeButton"
+         ariaCurrentWhenActive="page">
+        Columbia
+      </a>
+      <a class="location"
+         (click)="changeMenuStatus()"
+         routerLink="TOP"
+         routerLinkActive="activeButton"
+         ariaCurrentWhenActive="page">
+        Kansas
+      </a>
+    </nav>
+  </div>
+</div>
 <div class="main">
+  <div class="navbar">
+    <img
+      (click)="changeMenuStatus()"
+      alt="menu"
+      src="https://raw.githubusercontent.com/faykris/weather-monitoring-front/main/src/assets/icons/icon-menu.svg"
+    >
+  </div>
   <div class="sidebar">
     <nav>
       <a class="location"
@@ -18,5 +50,7 @@
   <div class="container">
     <router-outlet></router-outlet>
   </div>
+  <app-footer style="width: 100%"></app-footer>
 </div>
+
 

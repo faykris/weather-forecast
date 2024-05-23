@@ -10,6 +10,7 @@ import { ColumbiaComponent } from './columbia/columbia.component';
 import { KansasComponent } from './kansas/kansas.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ColumbiaComponent,
     KansasComponent,
     WelcomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
