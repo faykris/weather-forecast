@@ -43,7 +43,7 @@
 
 .main {
   display: flex;
-  height: 100vh;
+  min-height: 60rem;
   flex-wrap: wrap;
   .navbar {
     display: none;
@@ -91,6 +91,7 @@
   }
   .container {
     width: 75%;
+    min-height: 50rem;
     padding: 1vw 3vw;
     display: flex;
     justify-content: center;
