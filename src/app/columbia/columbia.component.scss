@@ -3,12 +3,49 @@ h1 {
   font-family: Verdana, sans-serif;
   margin-bottom: 1rem;
   text-shadow: 2px 1px 5px #333;
+  text-align: center;
 }
 .chart {
   padding: 1vw;
   background-color: white;
-  width: 55vw;
-  height: 30vw;
+  width: 70vw;
+  height: 35vw;
   border-radius: 5px;
   box-shadow: 1px 1px 15px 3px #79b;
+}
+
+.card {
+  margin-top: 1.5vw;
+  background-color: white;
+  box-shadow: 1px 1px 15px 3px #79b;
+  padding: 1vw;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: Verdana, sans-serif;
+  .title {
+    width: 100%;
+    text-align: center;
+    color: #0052a8;
+    margin-bottom: 1vw;
+  }
+  .icon {
+    img {
+      width: 10vw;
+      border-radius: 7px;
+      border: 2px solid #0c73e0;
+    }
+  }
+  .info {
+    width: 80%;
+    p {
+      color: #777;
+      font-size: 14px;
+      span {
+        font-weight: 800;
+        color: #0c73e0;
+      }
+    }
+  }
 }

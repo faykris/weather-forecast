@@ -9,6 +9,7 @@ import { ChartComponent } from './chart/chart.component';
 import { ColumbiaComponent } from './columbia/columbia.component';
 import { KansasComponent } from './kansas/kansas.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     ChartComponent,
     ColumbiaComponent,
     KansasComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

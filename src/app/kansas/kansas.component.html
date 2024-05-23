@@ -2,3 +2,42 @@
 <div class="chart" *ngIf="kansasForecast">
   <app-chart [data]="kansasForecast" [chart]="kansasWeather"></app-chart>
 </div>
+
+<div *ngFor="let period of kansasForecast?.properties?.periods" class="card">
+  <div class="title">
+    <h4>{{period?.name}}</h4>
+  </div>
+  <div class="icon">
+    <img [src]="period?.icon" [alt]="period?.name">
+  </div>
+  <div class="info">
+    <p>
+      <span>Forecast: </span>
+      {{period?.detailedForecast || 'N/A'}}
+    </p>
+    <p>
+      <span>Dew point: </span>
+      {{period?.dewpoint.value || 'N/A'}}
+    </p>
+    <p>
+      <span>Probability of precipitation: </span>
+      {{period?.probabilityOfPrecipitation.value || 'N/A'}}
+    </p>
+    <p>
+      <span>Relative Humidity: </span>
+      {{period?.relativeHumidity.value || 'N/A'}}
+    </p>
+    <p>
+      <span>Temperature: </span>
+      {{period?.temperature + ' F'|| 'N/A'}}
+    </p>
+    <p>
+      <span>Wind direction: </span>
+      {{period?.windDirection  || 'N/A'}}
+    </p>
+    <p>
+      <span>Wind speed: </span>
+      {{period?.windSpeed || 'N/A'}}
+    </p>
+  </div>
+</div>

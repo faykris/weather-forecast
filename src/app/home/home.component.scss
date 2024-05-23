@@ -20,6 +20,12 @@
         font-weight: bold;
         padding: 8px 24px;
         text-decoration: none;
+        transition: all .3s;
+        &:hover {
+          background-color: #69a8ea;
+          color: #ffffff;
+          text-shadow: 0 1px 0 #528ecc;
+        }
       }
       .activeButton {
         background: #6aabee linear-gradient(to bottom, #69a8ea 5%, #0c73e0 100%);
@@ -30,9 +36,10 @@
   }
   .container {
     width: 75%;
-    padding: 3vw;
+    padding: 1vw 3vw;
     display: flex;
     justify-content: center;
+    overflow-y: auto;
     background: #bddbfa linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
   }
 }
